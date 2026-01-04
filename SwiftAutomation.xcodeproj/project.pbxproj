@@ -126,6 +126,8 @@
 		4F63094E1DFC19A90089ADDB /* finder_to_textedit_event.gif in Copy Files */ = {isa = PBXBuildFile; fileRef = 4F0E393B1BA864A400FF2A96 /* finder_to_textedit_event.gif */; };
 		4F63094F1DFC19A90089ADDB /* relationships_example.gif in Copy Files */ = {isa = PBXBuildFile; fileRef = 4F0E39431BA864A400FF2A96 /* relationships_example.gif */; };
 		4F6309501DFC19A90089ADDB /* full.css in Copy Files */ = {isa = PBXBuildFile; fileRef = 4F0E393C1BA864A400FF2A96 /* full.css */; };
+		4F9553012A41E4F1007C5FD2 /* AppleEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F46A42823225AAD008E0265 /* AppleEvents.framework */; };
+		4F9553022A41E4F1007C5FD2 /* AppleEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F46A42823225AAD008E0265 /* AppleEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F9AFB531D5E9B4100A71890 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AFB451D5E99FC00A71890 /* main.swift */; };
 		4FACE27622723091000A04A0 /* SwiftAutomationLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FACE27422723091000A04A0 /* SwiftAutomationLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4FACE27A227230D1000A04A0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F63C4271B7CF06E000D74EE /* main.swift */; };
@@ -268,6 +270,17 @@
 				4F6309501DFC19A90089ADDB /* full.css in Copy Files */,
 			);
 			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F9553032A41E4F1007C5FD2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4F9553022A41E4F1007C5FD2 /* AppleEvents.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4F9AFB341D5B58EB00A71890 /* CopyFiles */ = {
@@ -467,6 +480,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9553012A41E4F1007C5FD2 /* AppleEvents.framework in Frameworks */,
 				4F252BB9224F936C00888935 /* Foundation.framework in Frameworks */,
 				4FFBE3E92295F6D200DADF30 /* SwiftAutomation.framework in Frameworks */,
 				4FFBE3E82295F6D200DADF30 /* MacOSGlues.framework in Frameworks */,
@@ -845,6 +859,7 @@
 				4F9AFB321D5B58EB00A71890 /* Sources */,
 				4F9AFB331D5B58EB00A71890 /* Frameworks */,
 				4F9AFB341D5B58EB00A71890 /* CopyFiles */,
+				4F9553032A41E4F1007C5FD2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1215,6 +1230,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 27XZ82KJ77;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1230,6 +1246,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 27XZ82KJ77;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1258,6 +1275,7 @@
 				INFOPLIST_FILE = MacOSGlues/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.bitbucket.hhas.MacOSGlues;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1291,6 +1309,7 @@
 				INFOPLIST_FILE = MacOSGlues/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.bitbucket.hhas.MacOSGlues;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1317,6 +1336,7 @@
 				DEVELOPMENT_TEAM = 27XZ82KJ77;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -1339,6 +1359,7 @@
 				DEVELOPMENT_TEAM = 27XZ82KJ77;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
@@ -1463,6 +1484,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 27XZ82KJ77;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1477,6 +1499,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 27XZ82KJ77;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1573,6 +1596,7 @@
 				INFOPLIST_FILE = SwiftAutomation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.github.hhas.SwiftAutomation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1604,6 +1628,7 @@
 				INFOPLIST_FILE = SwiftAutomation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.github.hhas.SwiftAutomation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

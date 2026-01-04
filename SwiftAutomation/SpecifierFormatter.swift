@@ -5,8 +5,9 @@
 //  Generates source code representation of Specifier.
 //
 
-import Foundation
 import AppleEvents
+
+import Foundation
 
 #if canImport(AppKit)
 import AppKit
@@ -166,8 +167,9 @@ public class SpecifierFormatter {
         case .userProperty:
             return "\(result).userProperty(\(self.formatValue(specifier.selectorData)))"
         case .relativePosition: // specifier.previous/next(SYMBOL)
+            // kludge: some kAE constants imported from C headers are mistyped as Int; fortunately they are small enough to cast to OSType (UInt32) without error
             if let seld = specifier.selectorData as? Descriptor, // ObjectSpecifier.unpackSelf does not unpack ordinals
-                    let name = [kAEPrevious: "previous", kAENext: "next"][try! unpackAsEnum(seld)],
+               let name = [OSType(kAEPrevious): "previous", OSType(kAENext): "next"][try! unpackAsEnum(seld)],
                     let parent = specifier.parentQuery as? ObjectSpecifier {
                 if specifier.wantType == parent.wantType {
                     return "\(result).\(name)()" // use shorthand form for neatness

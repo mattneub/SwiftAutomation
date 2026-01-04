@@ -13,6 +13,7 @@ import AppKit
 import Foundation
 import SwiftAutomation
 import MacOSGlues
+import AppleEvents
 
 
 let textedit = TextEdit()
@@ -73,56 +74,87 @@ do {
 
 do {
     
-    let itunes = ITunes()
-    print("// itunes.playerState.get()")
-    print("=> \(try itunes.playerState.get())")
-    
-    print()
-    print("// try ITunes().play()")
-    try ITunes().play()
-    
-    print()
-    print("// try itunes.currentTrack.name.get()")
-    print("Current track:", try itunes.currentTrack.name.get())
-    
-    
-//    print("// Specifier.description: \(TEDApp.documents[1].text)")
-//    print("// Specifier.description: \(textedit.documents[1].text)")
-    
-    
-    // send `open` and `get` AEs using raw four-char codes
-    //let result = try textedit.sendAppleEvent(coreEventClass, kAEOpenDocuments, [keyDirectObject:NSURL.fileURLWithPath("/Users/has/todos.txt")])
-    //print(result)
-
-    print()
-    print("get text of every document of app \"TextEdit\"")
-    print("// try TextEdit().documents.text.get()")
-    print(try TextEdit().documents.text.get())
-    
-    print()
-    print("TEST: make new document with properties {text: \"Hello World!\"}")
-    print("// try textedit.make(new: TED.document, withProperties: [TED.text: \"Hello World!\"])")
-    let doc: TEDItem = try textedit.make(new: TED.document, withProperties: [TED.text: "Hello World!"])
-    print("=> \(doc)")
-    
-    print()
-    print("TEST: get text of doc")
-    print("// try doc.text.get()")
-    print(try doc.text.get())
-
-    try doc.text.color.set(to: [25186, 48058, 18246]) // green
-    print("TEST: get the color of text of doc")
-    print("// try doc.text.color.get()")
-    // print(try doc.text.color.get())  // WAS: Error -1700: Can't make some data into the expected type
-    print(try doc.text.color.get())     // NOW: [25186, 48058, 18246]
-    print(try textedit.windows.first.bounds.get()) // [left,top,right,bottom]
-
-    
-    
     let finder = Finder()
-    print("TEST: get desktop position of first item of desktop")
-    print(try finder.desktop.items.first.desktopPosition.get()) // [left,top]
+    print("TEST: get modification date of folder 1 of home")
+    print(try finder.home.folders["Downloads"].comment.get()) //
 
+    print(try finder.home.folders["Downloads"].modificationDate.get()) //
+    print("ok")
+    
+     
+    let d: AppleEvents.ScalarDescriptor = AppleEvents.packAsDate(Date(timeIntervalSince1970: 10) + Double(TimeZone.current.secondsFromGMT(for: Date()))) // TO DO: tz fixes
+    print(d)
+    print( try AppleEvents.unpackAsAny(d))
+
+    
+        /*
+    // get name of document 1
+    
+    // - using four-char code strings
+    let result2 = try textedit.sendAppleEvent("coregetd", ["----": textedit.elements("docu")[1].property("pnam")])
+    print(result2)
+    
+    // - using glue-defined terminology
+    let result3 = try textedit.get(TEDApp.documents[1].name)
+    print(result3)
+    
+    let result3a: Any = try textedit.documents[1].name.get() // convenience syntax for the above
+    print(result3a)
+    */
+    
+    
+    /*
+        
+        let itunes = ITunes()
+        print("// itunes.playerState.get()")
+        print("=> \(try itunes.playerState.get())")
+        
+        print()
+        print("// try ITunes().play()")
+        try ITunes().play()
+        
+        print()
+        print("// try itunes.currentTrack.name.get()")
+        print("Current track:", try itunes.currentTrack.name.get())
+        
+        
+        //    print("// Specifier.description: \(TEDApp.documents[1].text)")
+        //    print("// Specifier.description: \(textedit.documents[1].text)")
+        
+        
+        // send `open` and `get` AEs using raw four-char codes
+        //let result = try textedit.sendAppleEvent(coreEventClass, kAEOpenDocuments, [keyDirectObject:NSURL.fileURLWithPath("/Users/has/todos.txt")])
+        //print(result)
+        
+        print()
+        print("get text of every document of app \"TextEdit\"")
+        print("// try TextEdit().documents.text.get()")
+        print(try TextEdit().documents.text.get())
+        
+        print()
+        print("TEST: make new document with properties {text: \"Hello World!\"}")
+        print("// try textedit.make(new: TED.document, withProperties: [TED.text: \"Hello World!\"])")
+        let doc: TEDItem = try textedit.make(new: TED.document, withProperties: [TED.text: "Hello World!"])
+        print("=> \(doc)")
+        
+        print()
+        print("TEST: get text of doc")
+        print("// try doc.text.get()")
+        print(try doc.text.get())
+        
+        try doc.text.color.set(to: [25186, 48058, 18246]) // green
+        print("TEST: get the color of text of doc")
+        print("// try doc.text.color.get()")
+        // print(try doc.text.color.get())  // WAS: Error -1700: Can't make some data into the expected type
+        print(try doc.text.color.get())     // NOW: [25186, 48058, 18246]
+        print(try textedit.windows.first.bounds.get()) // [left,top,right,bottom]
+        
+        
+        
+        let finder = Finder()
+        print("TEST: get desktop position of first item of desktop")
+        print(try finder.desktop.items.first.desktopPosition.get()) // [left,top]
+    */
     
     /*
 /*
@@ -130,7 +162,7 @@ do {
     // get name of document 1
     
     // - using four-char code strings
-    let result2 = try textedit.sendAppleEvent("core", "getd", ["----": textedit.elements("docu")[1].property("pnam")])
+    let result2 = try textedit.sendAppleEvent("coregetd", ["----": textedit.elements("docu")[1].property("pnam")])
     print(result2)
     
     // - using glue-defined terminology
@@ -203,6 +235,8 @@ do {
     */
 //} catch {
 //    print("ERROR: \(error)")
+} catch {
+    print(error)
 }
 
 
