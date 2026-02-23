@@ -103,19 +103,19 @@ do {
     */
     
     
-    /*
+    
         
-        let itunes = ITunes()
+        let music = Music()
         print("// itunes.playerState.get()")
-        print("=> \(try itunes.playerState.get())")
+        print("=> \(try music.playerState.get())")
         
         print()
-        print("// try ITunes().play()")
-        try ITunes().play()
+        print("// try Music().play()")
+        try Music().play()
         
         print()
         print("// try itunes.currentTrack.name.get()")
-        print("Current track:", try itunes.currentTrack.name.get())
+        print("Current track:", try music.currentTrack.name.get())
         
         
         //    print("// Specifier.description: \(TEDApp.documents[1].text)")
@@ -150,7 +150,7 @@ do {
         print(try textedit.windows.first.bounds.get()) // [left,top,right,bottom]
         
         
-        
+    /*
         let finder = Finder()
         print("TEST: get desktop position of first item of desktop")
         print(try finder.desktop.items.first.desktopPosition.get()) // [left,top]
