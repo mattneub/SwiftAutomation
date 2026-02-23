@@ -19,8 +19,6 @@
 		4F1ABE0E1E0752DA008BA807 /* ScriptEditorGlue.swift.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ABDDC1E0752DA008BA807 /* ScriptEditorGlue.swift.sdef */; };
 		4F1ABE0F1E0752DA008BA807 /* BluetoothFileExchangeGlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1ABDDD1E0752DA008BA807 /* BluetoothFileExchangeGlue.swift */; };
 		4F1ABE101E0752DA008BA807 /* BluetoothFileExchangeGlue.swift.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ABDDE1E0752DA008BA807 /* BluetoothFileExchangeGlue.swift.sdef */; };
-		4F1ABE131E0752DA008BA807 /* ITunesGlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1ABDE11E0752DA008BA807 /* ITunesGlue.swift */; };
-		4F1ABE141E0752DA008BA807 /* ITunesGlue.swift.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ABDE21E0752DA008BA807 /* ITunesGlue.swift.sdef */; };
 		4F1ABE151E0752DA008BA807 /* TextEditGlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1ABDE31E0752DA008BA807 /* TextEditGlue.swift */; };
 		4F1ABE161E0752DA008BA807 /* TextEditGlue.swift.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ABDE41E0752DA008BA807 /* TextEditGlue.swift.sdef */; };
 		4F1ABE171E0752DA008BA807 /* XcodeGlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1ABDE51E0752DA008BA807 /* XcodeGlue.swift */; };
@@ -126,6 +124,8 @@
 		4F63094E1DFC19A90089ADDB /* finder_to_textedit_event.gif in Copy Files */ = {isa = PBXBuildFile; fileRef = 4F0E393B1BA864A400FF2A96 /* finder_to_textedit_event.gif */; };
 		4F63094F1DFC19A90089ADDB /* relationships_example.gif in Copy Files */ = {isa = PBXBuildFile; fileRef = 4F0E39431BA864A400FF2A96 /* relationships_example.gif */; };
 		4F6309501DFC19A90089ADDB /* full.css in Copy Files */ = {isa = PBXBuildFile; fileRef = 4F0E393C1BA864A400FF2A96 /* full.css */; };
+		4F86647D2F4C460F0081F489 /* MusicGlue.swift.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4F86647C2F4C460F0081F489 /* MusicGlue.swift.sdef */; };
+		4F86647E2F4C460F0081F489 /* MusicGlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86647B2F4C460F0081F489 /* MusicGlue.swift */; };
 		4F9553012A41E4F1007C5FD2 /* AppleEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F46A42823225AAD008E0265 /* AppleEvents.framework */; };
 		4F9553022A41E4F1007C5FD2 /* AppleEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F46A42823225AAD008E0265 /* AppleEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F9AFB531D5E9B4100A71890 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AFB451D5E99FC00A71890 /* main.swift */; };
@@ -364,8 +364,6 @@
 		4F1ABDDC1E0752DA008BA807 /* ScriptEditorGlue.swift.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ScriptEditorGlue.swift.sdef; sourceTree = "<group>"; };
 		4F1ABDDD1E0752DA008BA807 /* BluetoothFileExchangeGlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothFileExchangeGlue.swift; sourceTree = "<group>"; };
 		4F1ABDDE1E0752DA008BA807 /* BluetoothFileExchangeGlue.swift.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BluetoothFileExchangeGlue.swift.sdef; sourceTree = "<group>"; };
-		4F1ABDE11E0752DA008BA807 /* ITunesGlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesGlue.swift; sourceTree = "<group>"; };
-		4F1ABDE21E0752DA008BA807 /* ITunesGlue.swift.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ITunesGlue.swift.sdef; sourceTree = "<group>"; };
 		4F1ABDE31E0752DA008BA807 /* TextEditGlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEditGlue.swift; sourceTree = "<group>"; };
 		4F1ABDE41E0752DA008BA807 /* TextEditGlue.swift.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TextEditGlue.swift.sdef; sourceTree = "<group>"; };
 		4F1ABDE51E0752DA008BA807 /* XcodeGlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeGlue.swift; sourceTree = "<group>"; };
@@ -433,6 +431,8 @@
 		4F63C4421B87AC88000D74EE /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		4F63C4441B8A4DFC000D74EE /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		4F63C4461B8A669C000D74EE /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		4F86647B2F4C460F0081F489 /* MusicGlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGlue.swift; sourceTree = "<group>"; };
+		4F86647C2F4C460F0081F489 /* MusicGlue.swift.sdef */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MusicGlue.swift.sdef; sourceTree = "<group>"; };
 		4F9AFB361D5B58EB00A71890 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9AFB451D5E99FC00A71890 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = test/main.swift; sourceTree = SOURCE_ROOT; };
 		4FACE27222723090000A04A0 /* SwiftAutomationLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftAutomationLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -616,10 +616,10 @@
 				4F1ABDFD1E0752DA008BA807 /* FontBookGlue.swift.sdef */,
 				4F1ABDFF1E0752DA008BA807 /* GarageBandGlue.swift.sdef */,
 				4F1ABE401E075464008BA807 /* ImageEventsGlue.swift.sdef */,
-				4F1ABDE21E0752DA008BA807 /* ITunesGlue.swift.sdef */,
 				4F1ABE501E075B02008BA807 /* KeynoteGlue.swift.sdef */,
 				4F1ABE011E0752DA008BA807 /* MailGlue.swift.sdef */,
 				4F1ABDE81E0752DA008BA807 /* MessagesGlue.swift.sdef */,
+				4F86647C2F4C460F0081F489 /* MusicGlue.swift.sdef */,
 				4F1ABDEA1E0752DA008BA807 /* NotesGlue.swift.sdef */,
 				4F1ABE4C1E075B02008BA807 /* NumbersGlue.swift.sdef */,
 				4F1ABE4E1E075B02008BA807 /* PagesGlue.swift.sdef */,
@@ -645,10 +645,10 @@
 				4F1ABDFC1E0752DA008BA807 /* FontBookGlue.swift */,
 				4F1ABDFE1E0752DA008BA807 /* GarageBandGlue.swift */,
 				4F1ABE3F1E075464008BA807 /* ImageEventsGlue.swift */,
-				4F1ABDE11E0752DA008BA807 /* ITunesGlue.swift */,
 				4F1ABE4F1E075B02008BA807 /* KeynoteGlue.swift */,
 				4F1ABE001E0752DA008BA807 /* MailGlue.swift */,
 				4F1ABDE71E0752DA008BA807 /* MessagesGlue.swift */,
+				4F86647B2F4C460F0081F489 /* MusicGlue.swift */,
 				4F1ABDE91E0752DA008BA807 /* NotesGlue.swift */,
 				4F1ABE4B1E075B02008BA807 /* NumbersGlue.swift */,
 				4F1ABE4D1E075B02008BA807 /* PagesGlue.swift */,
@@ -1028,7 +1028,6 @@
 				4F1ABE161E0752DA008BA807 /* TextEditGlue.swift.sdef in Resources */,
 				4F1ABE0B1E0752DA008BA807 /* TerminalGlue.swift.sdef in Resources */,
 				4F1ABE521E075B02008BA807 /* NumbersGlue.swift.sdef in Resources */,
-				4F1ABE141E0752DA008BA807 /* ITunesGlue.swift.sdef in Resources */,
 				4F1ABE541E075B02008BA807 /* PagesGlue.swift.sdef in Resources */,
 				4F1ABE561E075B02008BA807 /* KeynoteGlue.swift.sdef in Resources */,
 				4F1ABE241E0752DA008BA807 /* SafariGlue.swift.sdef in Resources */,
@@ -1037,6 +1036,7 @@
 				4F1ABE221E0752DA008BA807 /* RemindersGlue.swift.sdef in Resources */,
 				4F1ABE1A1E0752DA008BA807 /* MessagesGlue.swift.sdef in Resources */,
 				4F1ABE2F1E0752DA008BA807 /* FontBookGlue.swift.sdef in Resources */,
+				4F86647D2F4C460F0081F489 /* MusicGlue.swift.sdef in Resources */,
 				4F1ABE271E0752DA008BA807 /* AutomatorGlue.swift.sdef in Resources */,
 				4F1ABE291E0752DA008BA807 /* CalendarGlue.swift.sdef in Resources */,
 				4F1ABE2B1E0752DA008BA807 /* ContactsGlue.swift.sdef in Resources */,
@@ -1080,7 +1080,6 @@
 				4F1ABE471E075464008BA807 /* ImageEventsGlue.swift in Sources */,
 				4F1ABE171E0752DA008BA807 /* XcodeGlue.swift in Sources */,
 				4F1ABE281E0752DA008BA807 /* CalendarGlue.swift in Sources */,
-				4F1ABE131E0752DA008BA807 /* ITunesGlue.swift in Sources */,
 				4F1ABE351E0752DA008BA807 /* FinderGlue.swift in Sources */,
 				4F1ABE5B1E081D98008BA807 /* DatabaseEventsGlue.swift in Sources */,
 				4F1ABE0C1E0752DA008BA807 /* SystemInformationGlue.swift in Sources */,
@@ -1097,6 +1096,7 @@
 				4F1ABE231E0752DA008BA807 /* SafariGlue.swift in Sources */,
 				4F1ABE531E075B02008BA807 /* PagesGlue.swift in Sources */,
 				4F1ABE511E075B02008BA807 /* NumbersGlue.swift in Sources */,
+				4F86647E2F4C460F0081F489 /* MusicGlue.swift in Sources */,
 				4F1ABE491E075464008BA807 /* AppleScriptUtilityGlue.swift in Sources */,
 				4F1ABE0D1E0752DA008BA807 /* ScriptEditorGlue.swift in Sources */,
 				4F1ABE151E0752DA008BA807 /* TextEditGlue.swift in Sources */,
